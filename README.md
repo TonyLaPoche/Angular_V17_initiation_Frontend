@@ -11,7 +11,7 @@ Ce projet est une démonstration de mes compétences en développement frontend 
 - Fonctionnalités Angular : Démonstration de compétences étendues dans l'utilisation des différentes fonctionnalités d'Angular, notamment :
   - Composants et modules
   - Data binding et gestion des événements
-  - Utilisation des services et de l'injection 
+  - Utilisation des services et de l'injection
   de dépendances
   - Routing pour la navigation
   - Gestion des états avec RxJS

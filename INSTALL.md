@@ -14,6 +14,7 @@ Avant de commencer, assurez-vous que les outils suivants sont installés sur vot
 ```bash copy
 npm install -g @angular/cli
 ```
+
 Une fois que Node.js et Angular CLI sont installés, clonez le projet depuis votre dépôt GitHub sur votre machine locale. Ensuite, naviguez dans le dossier du projet via un terminal et exécutez la commande suivante pour installer toutes les dépendances nécessaires listées dans `package.json` :
 
 ```bash copy
