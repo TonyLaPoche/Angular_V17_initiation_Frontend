@@ -1,10 +1,10 @@
 import { Component, inject } from '@angular/core';
 import { HousingLocationComponent } from '../../../shared/components/housing-location/housing-location.component';
-import { HousingService } from '../../../housing.service';
+import { HousingService } from '../../../core/services/housing.service';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 
-import { SearchComponent } from '../../../search/search.component';
+import { SearchComponent } from '../../../shared/components/search/search.component';
 import { BehaviorSubject, map, switchMap } from 'rxjs';
 
 @Component({
@@ -15,6 +15,7 @@ import { BehaviorSubject, map, switchMap } from 'rxjs';
       <app-search
         (onSearch)="term$.next($event)"
         (searchTerm)="term$.next($event)"
+        placeholder="Search for a city..."
       ></app-search>
     </section>
     <section class="results">

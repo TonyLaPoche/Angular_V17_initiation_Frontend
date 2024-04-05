@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
-import { HousingService } from '../../../housing.service';
+import { HousingService } from '../../../core/services/housing.service';
 import {
   FormControl,
   FormGroup,
@@ -9,7 +9,7 @@ import {
 } from '@angular/forms';
 import { FormDetail } from '../../../form-detail';
 import { CommonModule } from '@angular/common';
-import { HousingLocation } from '../../../housing-location';
+import { HousingLocation } from '../../../shared/components/housing-location/housing-location';
 import { Observable, map, switchMap } from 'rxjs';
 
 @Component({

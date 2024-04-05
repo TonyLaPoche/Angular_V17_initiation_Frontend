@@ -1,4 +1,4 @@
-import { Component, Output, output } from '@angular/core';
+import { Component, Output, input, output } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { debounceTime, distinctUntilChanged, startWith } from 'rxjs';
 
@@ -12,6 +12,8 @@ import { debounceTime, distinctUntilChanged, startWith } from 'rxjs';
 export class SearchComponent {
   searchControl = new FormControl('', { nonNullable: true });
   form = new FormGroup({ searchControl: this.searchControl });
+
+  placeholder = input.required();
 
   @Output() searchTerm = this.searchControl.valueChanges.pipe(
     startWith(''),

@@ -1,7 +1,7 @@
 <form [formGroup]="form" (ngSubmit)="onSearch.emit(searchControl.value)">
   <input
     type="text"
-    placeholder="Filter by city"
+    [placeholder]="placeholder()"
     formControlName="searchControl"
   />
   <button type="submit" class="primary">Search</button>
