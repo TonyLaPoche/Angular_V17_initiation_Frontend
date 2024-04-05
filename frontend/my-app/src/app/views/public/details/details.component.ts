@@ -7,7 +7,7 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
-import { FormDetail } from '../../../form-detail';
+import { FormDetail } from './form-detail';
 import { CommonModule } from '@angular/common';
 import { HousingLocation } from '../../../shared/components/housing-location/housing-location';
 import { Observable, map, switchMap } from 'rxjs';

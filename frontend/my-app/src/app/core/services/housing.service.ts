@@ -1,6 +1,6 @@
 import { Injectable, inject } from '@angular/core';
 import { HousingLocation } from '../../shared/components/housing-location/housing-location';
-import { FormDetail } from '../../form-detail';
+import { FormDetail } from '../../views/public/details/form-detail';
 import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
