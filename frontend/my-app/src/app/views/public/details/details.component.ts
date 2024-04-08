@@ -66,7 +66,6 @@ import { Observable, map, switchMap } from 'rxjs';
           </button>
           <pre>
             {{ applyForm.controls['firstName'].errors | json }}
-
           </pre
           >
         </form>
