@@ -48,14 +48,24 @@ import { Observable, map, switchMap } from 'rxjs';
         <form [formGroup]="applyForm" (submit)="submitApplication()">
           <label for="first-name">First Name</label>
           <input id="first-name" type="text" formControlName="firstName" />
-          @if (firstNameCTRL.getError('minlength'); as minLengthError ) {
+          @if (firstNameCTRL.getError('maxlength'); as maxLengthError ) {
+          <p class="error">Please enter at least 20 characters.</p>
           <p class="error">
-            {{ minLengthError.actualLength }} /
-            {{ minLengthError.requiredLength }}
+            You entered:
+            {{ maxLengthError.actualLength }} /
+            {{ maxLengthError.requiredLength }}
           </p>
           }
           <label for="first-name">Last Name</label>
           <input id="last-name" type="text" formControlName="lastName" />
+          @if (lastNameCTRL.getError('maxlength'); as maxLengthError ) {
+          <p class="error">Please enter at least 20 characters.</p>
+          <p class="error">
+            You entered:
+            {{ maxLengthError.actualLength }} /
+            {{ maxLengthError.requiredLength }}
+          </p>
+          }
           <label for="email">Email</label>
           <input id="email" type="text" formControlName="email" />
           @if (applyForm.controls['email'].getError('email')) {
@@ -64,10 +74,6 @@ import { Observable, map, switchMap } from 'rxjs';
           <button type="submit" class="primary" [disabled]="applyForm.invalid">
             Apply now
           </button>
-          <pre>
-            {{ applyForm.controls['firstName'].errors | json }}
-          </pre
-          >
         </form>
       </section>
     </article>
@@ -87,13 +93,17 @@ export class DetailsComponent {
     firstName: new FormControl('', {
       validators: [
         Validators.required,
-        Validators.minLength(10),
-        Validators.maxLength(50),
+        Validators.minLength(1),
+        Validators.maxLength(20),
       ],
       nonNullable: true,
     }),
     lastName: new FormControl('', {
-      validators: [Validators.required],
+      validators: [
+        Validators.required,
+        Validators.minLength(1),
+        Validators.maxLength(20),
+      ],
       nonNullable: true,
     }),
     email: new FormControl('', {
@@ -108,5 +118,9 @@ export class DetailsComponent {
 
   get firstNameCTRL() {
     return this.applyForm.get('firstName') as FormControl;
+  }
+
+  get lastNameCTRL() {
+    return this.applyForm.get('lastName') as FormControl;
   }
 }
