@@ -1,12 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: "Be Vietnam Pro", sans-serif;
 }
+
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 var(--content-padding);
+  max-width: 78rem;
+}
+
 :root {
   --primary-color: #605dc8;
   --secondary-color: #8b89e6;
