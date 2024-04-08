@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
-import { HousingLocationComponent } from '../../../shared/components/housing-location/housing-location.component';
-import { HousingService } from '../../../core/services/housing.service';
+import { HousingLocationComponent } from './housing-location/housing-location.component';
+import { HousingService } from './housing-location/housing.service';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 
