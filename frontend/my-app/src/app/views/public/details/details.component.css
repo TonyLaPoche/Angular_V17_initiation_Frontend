@@ -66,6 +66,12 @@ input {
   border-left: none;
   border-bottom: solid 0.3px;
 }
+
+.error {
+  margin-bottom: 0.5rem;
+  color: lightcoral;
+}
+
 @media (max-width: 1024px) {
   .listing-photo {
     width: 100%;
